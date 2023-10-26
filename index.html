@@ -5,21 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to my world</title>
     <link rel="stylesheet" href="style.css">
-    <script src=""></script>
+    <script src="js/main.js"></script>
 </head>
 <body>
     <div class="container">
-        <header>
+        <div class="header">
             <a class="logo" href="index.html">Loveth</a>
             <nav class="nav details-medium">
-                <ul>
-                    <li><a class="header-link" href="index.html">Home</a></li>
-                    <li><a class="header-link" href="index.html#about-me">About</a></li>
-                    <li><a class="header-link" href="index.html#services">Services</a></li>
-                    <li class="contact p-5 blue-light"><a class="header-link" href="index.html#contact">Contact</a></li>
+                <button class="toggle-button" onclick="toggleNav()">
+                    <span class="toggle-icon-open"><img src="images/close.png" alt="close"></i></span>
+                    <span class="toggle-icon-close"><img src="images/open.png" alt="open"></span>
+                </button>
+                <ul class="menu">
+                    <li><a class="header-link" href="index.html" onclick="closeMenu()">Home</a></li>
+                    <li><a class="header-link" href="index.html#about-me" onclick="closeMenu()">About</a></li>
+                    <li><a class="header-link" href="index.html#services" onclick="closeMenu()">Services</a></li>
+                    <li class="contact p-5 blue-light"><a class="header-link" href="index.html#contact" onclick="closeMenu()">Contact</a></li>
                 </ul>
             </nav>
-        </header>
+        </div> <!--header-->
         <section class="section home row even-space">
             <article class="main">
                 <div class="sub-horizontal align-middle">
@@ -135,13 +139,15 @@
                     </div>
                 </div>
             </article>
-            <article class="pix column">
+            <article class="pix column align-middle">
                 <img id="contact-photo" class="photo" src="images/contact.jpg" alt="photo">
                 <p class="details-medium">loveth@Ohwoluv.com</p>
                 <p class="details-medium"> +2349086723126</p>
             </article>
         </section>
-        <footer></footer>
+        <footer>
+            <p>Waiting to serve you.</p>
+        </footer>
     </div>
     
 </body>
