@@ -6,6 +6,6 @@ function toggleNav() {
 
 // Close the menu after click
 function closeMenu() {
-  var nav = document.querySelector('.nav');
+  let nav = document.querySelector('.nav');
   nav.classList.remove('open');
 }
